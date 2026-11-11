@@ -16,6 +16,22 @@ function tick() {
 tick();
 setInterval(tick, 1000);
 
+const soundtrackToggle = document.querySelector('#soundtrackToggle');
+const youtubePlayer = document.querySelector('#youtubePlayer');
+let soundtrackPlaying = false;
+
+function sendYouTubeCommand(command) {
+  youtubePlayer.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: command, args: [] }), '*');
+}
+
+soundtrackToggle.addEventListener('click', () => {
+  soundtrackPlaying = !soundtrackPlaying;
+  sendYouTubeCommand(soundtrackPlaying ? 'playVideo' : 'pauseVideo');
+  soundtrackToggle.classList.toggle('is-playing', soundtrackPlaying);
+  soundtrackToggle.setAttribute('aria-pressed', String(soundtrackPlaying));
+  soundtrackToggle.querySelector('.sound-label').textContent = soundtrackPlaying ? 'Pausar soundtrack' : 'Activar soundtrack';
+});
+
 const glow = document.querySelector('.cursor-glow');
 window.addEventListener('pointermove', (event) => {
   glow.style.left = `${event.clientX}px`;

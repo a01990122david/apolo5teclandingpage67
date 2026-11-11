@@ -10,3 +10,5 @@ Landing page estática lista para GitHub Pages.
 4. Guarda y abre la URL que te entregue GitHub.
 
 No necesita Node, npm ni compilación. El contador está configurado para el **30 de noviembre de 2026 a las 23:59:59 (hora de Culiacán)**.
+
+La página incluye un botón para activar el soundtrack de YouTube. El visitante debe hacer clic para iniciarlo porque los navegadores bloquean el autoplay con sonido.
