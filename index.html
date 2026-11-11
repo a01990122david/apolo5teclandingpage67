@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#02040a" />
+    <meta name="description" content="APOLO 5 — Más allá de los límites. Equipo de ingeniería y cohetería experimental." />
+    <title>APOLO 5 | Más allá de los límites</title>
+    <link rel="icon" href="assets/APOLO5_principal_transparente.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="APOLO 5, inicio">
+        <span class="brand-mark">A5</span>
+        <span>APOLO <b>5</b></span>
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#mision">Misión</a>
+        <a href="#lanzamiento">Lanzamiento</a>
+        <a href="#equipo">Identidad</a>
+      </nav>
+      <a class="nav-cta" href="#lanzamiento">Ver cuenta regresiva <span>↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse-dot"></span> Proyecto de cohetería experimental · 2026</p>
+          <h1>NO VENIMOS<br /><em>A SEGUIR</em><br />EL MAPA.</h1>
+          <p class="hero-text">Diseñamos, probamos y lanzamos con una idea fija: el límite solo existe hasta que alguien decide cruzarlo.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lanzamiento">Preparar despegue <span>→</span></a>
+            <a class="button button-ghost" href="#mision">Conocer la misión</a>
+          </div>
+        </div>
+
+        <div class="launch-stage" aria-label="Animación de un cohete que se transforma en el logo de APOLO 5">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="stage-label label-top">VELOCIDAD / 01</div>
+          <div class="stage-label label-bottom">TRAYECTORIA CONFIRMADA</div>
+          <div class="rocket-wrap">
+            <div class="rocket-flare"></div>
+            <div class="rocket-body">
+              <span class="rocket-nose"></span><span class="rocket-core"></span><span class="fin fin-left"></span><span class="fin fin-right"></span>
+            </div>
+          </div>
+          <div class="burst burst-a"></div><div class="burst burst-b"></div><div class="burst burst-c"></div>
+          <img class="reveal-logo" src="assets/APOLO5_principal_transparente.png" alt="Logo circular de APOLO 5" />
+          <div class="stage-caption"><span class="line"></span><span>APOLO 5 / FLIGHT SYSTEMS</span><span class="line"></span></div>
+        </div>
+        <div class="scroll-note"><span></span> Desplázate para entrar en órbita</div>
+      </section>
+
+      <section class="manifesto section-shell" id="mision">
+        <div class="section-kicker">01 / La misión</div>
+        <div class="manifesto-copy">
+          <h2>La ambición no se anuncia.<br /><span>Se demuestra.</span></h2>
+          <p>APOLO 5 es un equipo que convierte la curiosidad en ingeniería, los cálculos en decisiones y cada prueba en una nueva forma de llegar más lejos.</p>
+        </div>
+        <div class="signal-list">
+          <div><strong>01</strong><span>Diseñar con precisión</span></div>
+          <div><strong>02</strong><span>Probar sin miedo</span></div>
+          <div><strong>03</strong><span>Lanzar con propósito</span></div>
+        </div>
+      </section>
+
+      <section class="countdown-section" id="lanzamiento">
+        <div class="section-shell countdown-layout">
+          <div class="countdown-copy">
+            <div class="section-kicker">02 / La cuenta regresiva</div>
+            <p class="launch-status"><span class="status-light"></span> Sistemas activos · misión en preparación</p>
+            <h2>El cielo va a<br /><span>tener noticias.</span></h2>
+            <p>La próxima ventana de lanzamiento está marcada. Guarda la fecha: al final de noviembre, APOLO 5 deja de ser una idea y se convierte en trayectoria.</p>
+          </div>
+          <div class="countdown-card">
+            <div class="card-top"><span>VENTANA DE LANZAMIENTO</span><span>30 / 11 / 2026</span></div>
+            <div class="countdown" aria-live="polite">
+              <div><strong id="days">--</strong><small>DÍAS</small></div><i>:</i>
+              <div><strong id="hours">--</strong><small>HORAS</small></div><i>:</i>
+              <div><strong id="minutes">--</strong><small>MINUTOS</small></div><i>:</i>
+              <div><strong id="seconds">--</strong><small>SEGUNDOS</small></div>
+            </div>
+            <div class="card-bottom"><span>CUENTA REGRESIVA T+0</span><span class="signal-bars"><i></i><i></i><i></i><i></i></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="identity section-shell" id="equipo">
+        <div class="section-kicker">03 / Una identidad en movimiento</div>
+        <div class="identity-grid">
+          <div class="identity-art"><img src="assets/APOLO5_horizontal_original_fondo_transparente.png" alt="Logotipo horizontal APOLO 5" /></div>
+          <div class="identity-copy"><h2>Más allá<br /><span>de los límites.</span></h2><p>Una identidad construida para verse tan veloz como el proyecto: contrastes fuertes, líneas limpias y un azul eléctrico que no pide permiso para destacar.</p><a href="#inicio" class="text-link">Volver a despegar <span>↗</span></a></div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="final-lines" aria-hidden="true"></div>
+        <img src="assets/APOLO5_principal_transparente.png" alt="" />
+        <div><p class="eyebrow">APOLO 5 / 2026</p><h2>Lo imposible solo<br /><em>está esperando.</em></h2><p class="final-tagline">MÁS ALLÁ DE LOS LÍMITES</p></div>
+      </section>
+    </main>
+
+    <footer><span>© 2026 APOLO 5</span><span>COHETERÍA · INGENIERÍA · FUTURO</span><span>HECHO PARA DESPEGAR <b>↗</b></span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
