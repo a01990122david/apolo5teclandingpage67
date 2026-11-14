@@ -1,4 +1,4 @@
-const target = new Date('2026-11-30T23:59:59-07:00').getTime();
+const target = new Date('2026-12-02T07:00:00-07:00').getTime();
 const fields = { days: document.querySelector('#days'), hours: document.querySelector('#hours'), minutes: document.querySelector('#minutes'), seconds: document.querySelector('#seconds') };
 
 function tick() {
@@ -17,16 +17,16 @@ tick();
 setInterval(tick, 1000);
 
 const soundtrackToggle = document.querySelector('#soundtrackToggle');
-const youtubePlayer = document.querySelector('#youtubePlayer');
+const soundtrackAudio = document.querySelector('#soundtrackAudio');
 let soundtrackPlaying = false;
 
-function sendYouTubeCommand(command) {
-  youtubePlayer.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: command, args: [] }), '*');
-}
-
-soundtrackToggle.addEventListener('click', () => {
+soundtrackToggle.addEventListener('click', async () => {
   soundtrackPlaying = !soundtrackPlaying;
-  sendYouTubeCommand(soundtrackPlaying ? 'playVideo' : 'pauseVideo');
+  if (soundtrackPlaying) {
+    try { await soundtrackAudio.play(); } catch (error) { soundtrackPlaying = false; }
+  } else {
+    soundtrackAudio.pause();
+  }
   soundtrackToggle.classList.toggle('is-playing', soundtrackPlaying);
   soundtrackToggle.setAttribute('aria-pressed', String(soundtrackPlaying));
   soundtrackToggle.querySelector('.sound-label').textContent = soundtrackPlaying ? 'Pausar soundtrack' : 'Activar soundtrack';
